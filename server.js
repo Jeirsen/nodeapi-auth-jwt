@@ -1,9 +1,12 @@
-const server = require("./server/config/app");
-const config = require("./server/config/env_config/config");
-const db = require("./server/config/db");
+//server.js file
 
-// create the basic server setup
+const server = require('./server/config/app')();
+const config = require('./server/config/env_config/config');
+const db = require('./server/config/db');
+
+//create the basic server setup 
+console.log(config)
 server.create(config, db);
 
-// start the server
+//start the server
 server.start();
